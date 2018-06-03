@@ -1,19 +1,39 @@
 CONFIG += console c++11
 
+SUBDIRS += \
+    Source \
+    Include
+
 SOURCES += \
-    functions.cpp
+    Source/functions.cpp
 
 HEADERS += \
-    functions.hpp
+    Include/functions.hpp
+INCLUDEPATH += \
+    Include
 
 main {
     SOURCES += main.cpp
 }
 
 tests {
-SOURCES += functionstestsuite.cpp \
-           test_main.cpp
-LIBS += -lgtest -L/lib/libgtest.so
+SUBDIRS += \
+    Test
+SOURCES += \
+    Test/functionstestsuite.cpp \
+    test_main.cpp \
+
+INCLUDEPATH += \
+    googletest/googlemock \
+    googletest/googletest \
+    googletest/googlemock/include \
+    googletest/googletest/include
+
+LIBS += -lgtest -L/googletest/gtest.pc
+LIBS += -lgmock -L/googletest/gmock.pc
+
+
+#Biblioteka
 }
 
 
