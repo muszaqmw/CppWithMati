@@ -1,4 +1,5 @@
 #!/bin/bash
-cmake googletest/ -DBUILD_SHARED_LIBS=ON
-make googletest/
-cp -a googletest/googlemock/libgmock.so googletest/googlemock/gtest/libgtest.so /usr/lib/
+cd googletest
+cmake -DBUILD_SHARED_LIBS=ON
+make
+cp -a googlemock/libgmock.so googlemock/gtest/libgtest.so /usr/lib/
