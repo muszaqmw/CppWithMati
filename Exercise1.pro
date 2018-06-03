@@ -28,12 +28,6 @@ INCLUDEPATH += \
     googletest/googletest \
     googletest/googlemock/include \
     googletest/googletest/include
-
-LIBS += -lgtest -L/googletest/gtest.pc
-LIBS += -lgmock -L/googletest/gmock.pc
-
-
-#Biblioteka
 }
 
 
