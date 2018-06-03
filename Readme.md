@@ -6,3 +6,6 @@ To run this project you need:
 - make
 - gcc
 - g++
+
+
+If you don't have libgest.so and libgmock.so run .startSqript.sh with sudo command.
