@@ -7,7 +7,7 @@ using namespace ::testing;
 
 struct functionsTestSuite : public Test
 {
-    std::array<int, 11> tab = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
+    std::array<int, 11> tab = {{1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89}};
 };
 
 TEST_F(functionsTestSuite, fibonacciSequence)

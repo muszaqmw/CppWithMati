@@ -1,4 +1,6 @@
-CONFIG += console c++11
+CONFIG += console
+QMAKE_CXXFLAGS += -std=c++17
+
 
 SUBDIRS += \
     Source \
@@ -28,6 +30,9 @@ INCLUDEPATH += \
     googletest/googletest \
     googletest/googlemock/include \
     googletest/googletest/include
+
+LIBS += -lgtest -L/lib/libgtest.so
+LIBS += -lgmock -L/lib/libgmock.so
 }
 
 
