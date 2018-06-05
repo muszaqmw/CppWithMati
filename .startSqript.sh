@@ -1,5 +1,5 @@
 #!/bin/bash
-git submodule update --recursive
+git submodule update --recursive --init
 cd googletest
 cmake -DBUILD_SHARED_LIBS=ON
 make
